@@ -84,22 +84,28 @@ Click Element Field
 Verify FirstName
     Wait Until Page Contains    ${RESULT_FirstName}
     Page Should Contain    ${RESULT_FirstName}
+    Capture Page Screenshot    filename=screenshot_${TEST NAME}.png
+
 
 Verify IDCard
     Wait Until Page Contains    ${RESULT_IDCARD}
     Page Should Contain    ${RESULT_IDCARD}
+    Capture Page Screenshot    filename=screenshot_${TEST NAME}.png
 
 Verify Password
     Wait Until Page Contains    ${RESULT_PASSWORD}
     Page Should Contain    ${RESULT_PASSWORD}
+    Capture Page Screenshot    filename=screenshot_${TEST NAME}.png
 
 Verify PhoneNum
     Wait Until Page Contains    ${RESULT_PHONENUM}
     Page Should Contain   ${RESULT_PHONENUM}
+    Capture Page Screenshot    filename=screenshot_${TEST NAME}.png
 
 Verify Email
     Wait Until Page Contains    ${RESULT_EMAIL}
     Page Should Contain    ${RESULT_EMAIL}
+    Capture Page Screenshot    filename=screenshot_${TEST NAME}.png
 
 
 

@@ -17,6 +17,8 @@ ${RESULT_PASSWORD}    ใส่ให้มันครบ 8 ตัวสิ
 ${RESULT_PHONENUM}    ใส่เบอร์ให้ครบ 10 ตัวสิ
 ${RESULT_EMAIL}    Email must contain specific domain name
 ${RESULT_TERMS-CONS}    You must accept the terms and conditions
+
+
 *** Test Cases ***
 Check validation FirastName
     [Documentation]    Test First
@@ -95,16 +97,23 @@ Verify IDCard
 Verify Password
     Wait Until Page Contains    ${RESULT_PASSWORD}
     Page Should Contain    ${RESULT_PASSWORD}
+     Execute JavaScript    window.scrollBy(0, window.innerHeight)
+     Sleep    2s
     Capture Page Screenshot    filename=screenshot_${TEST NAME}.png
+   
 
 Verify PhoneNum
     Wait Until Page Contains    ${RESULT_PHONENUM}
     Page Should Contain   ${RESULT_PHONENUM}
+     Execute JavaScript    window.scrollBy(0, window.innerHeight)
+     Sleep    2s
     Capture Page Screenshot    filename=screenshot_${TEST NAME}.png
 
 Verify Email
     Wait Until Page Contains    ${RESULT_EMAIL}
     Page Should Contain    ${RESULT_EMAIL}
+     Execute JavaScript    window.scrollBy(0, window.innerHeight)
+     Sleep    2s
     Capture Page Screenshot    filename=screenshot_${TEST NAME}.png
 
 
